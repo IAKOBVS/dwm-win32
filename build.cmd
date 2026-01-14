@@ -7,5 +7,5 @@ zig cc ^
     -Iextern/lua-compat-5.3 ^
     extern/lua-compat-5.3/compat-5.3.c ^
     -DPROJECT_NAME='"dwm-win32"' -DPROJECT_VER='"0.1.2"' -DPROJECT_VER_MAJOR=0 -DPROJECT_VER_MINOR=1 -DPROJECT_VER_PATCH=2 ^
-    -DNDEBUG -O2 -s ^
+    -DNDEBUG -O2 -march=native -s ^
     -target x86_64-windows-msvc -std=c99 -pedantic -Wall
