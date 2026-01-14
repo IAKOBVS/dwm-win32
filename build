@@ -1,0 +1,2 @@
+#!/bin/sh
+powershell.exe 'Stop-Process -Name "dwm32" -Force; ./build.cmd; ./dwm32.exe'
