@@ -11,7 +11,7 @@ static const unsigned int fontsize  = 20;
 #define selbgcolor      0x00775500
 #define selfgcolor      0x00eeeeee
 
-static const unsigned int borderpx    = 0;        /* border pixel of windows */
+static const unsigned int borderpx    = 5;        /* border pixel of windows */
 static const unsigned int textmargin  = 15;       /* margin for the text displayed on the bar */
 static bool showbar                   = true;     /* false means no bar */
 static bool topbar                    = true;     /* false means bottom bar */
@@ -87,32 +87,32 @@ static const wchar_t *termcmd[]  = { L"wt.exe", NULL };
 static Key keys[] = {
     /* modifier                     key        function             argument */
     { 0 }, // ??? dummy empty
-    { MODKEY|MOD_SHIFT,             VK_RETURN, spawn,               {.v = termcmd } },
-    { MODKEY|MOD_CONTROL,           'B',       togglebar,           {0} },
+    { MODKEY,                       VK_RETURN, spawn,               {.v = termcmd } },
+    { MODKEY,                       'B',       togglebar,           {0} },
     { MODKEY,                       'J',       focusstack,          {.i = +1 } },
     { MODKEY,                       'K',       focusstack,          {.i = -1 } },
-    { MODKEY|MOD_SHIFT,             'J',       movestack,           {.i = +1 } },
-    { MODKEY|MOD_SHIFT,             'K',       movestack,           {.i = -1 } },
-    { MODKEY|MOD_SHIFT,             'A',       forcearrange,        {.i = -1 } },
+    { MODKEY                        'J',       movestack,           {.i = +1 } },
+    { MODKEY                        'K',       movestack,           {.i = -1 } },
+    // { MODKEY                        'A',       forcearrange,        {.i = -1 } },
     { MODKEY,                       'H',       setmfact,            {.f = -0.05} },
     { MODKEY,                       'L',       setmfact,            {.f = +0.05} },
-    { MODKEY,                       'I',       showclientinfo,      {0} },
-    { MODKEY|MOD_CONTROL,           VK_RETURN, zoom,                {0} },
+    // { MODKEY,                       'I',       showclientinfo,      {0} },
+    // { MODKEY|MOD_CONTROL,           VK_RETURN, zoom,                {0} },
     { MODKEY,                       VK_TAB,    view,                {0} },
-    { MODKEY|MOD_SHIFT,             'C',       killclient,          {0} },
-    { MODKEY,                       'T',       setlayout,           {.v = &layouts[0]} },
-    { MODKEY,                       'F',       setlayout,           {.v = &layouts[1]} },
-    { MODKEY,                       'M',       setlayout,           {.v = &layouts[2]} },
-    { MODKEY,                       'B',       setlayout,           {.v = &layouts[3]} },
-    { MODKEY,                       'G',       setlayout,           {.v = &layouts[4]} },
-    { MODKEY|MOD_SHIFT,             'G',       setlayout,           {.v = &layouts[5]} },
-    { MODKEY,                       'D',       setlayout,           {.v = &layouts[6]} },
-    { MODKEY|MOD_SHIFT,             'D',       setlayout,           {.v = &layouts[7]} },
-    { MODKEY|MOD_CONTROL,           VK_SPACE,  setlayout,           {0} },
-    { MODKEY|MOD_SHIFT,             VK_SPACE,  togglefloating,      {0} },
+    { MODKEY,                       'Q',       killclient,          {0} },
+    // { MODKEY,                       'T',       setlayout,           {.v = &layouts[0]} },
+    // { MODKEY,                       'F',       setlayout,           {.v = &layouts[1]} },
+    // { MODKEY,                       'M',       setlayout,           {.v = &layouts[2]} },
+    // { MODKEY,                       'B',       setlayout,           {.v = &layouts[3]} },
+    // { MODKEY,                       'G',       setlayout,           {.v = &layouts[4]} },
+    // { MODKEY|MOD_SHIFT,             'G',       setlayout,           {.v = &layouts[5]} },
+    // { MODKEY,                       'D',       setlayout,           {.v = &layouts[6]} },
+    // { MODKEY|MOD_SHIFT,             'D',       setlayout,           {.v = &layouts[7]} },
+    // { MODKEY|MOD_CONTROL,           VK_SPACE,  setlayout,           {0} },
+    // { MODKEY|MOD_SHIFT,             VK_SPACE,  togglefloating,      {0} },
     { MODKEY,                       'N',       toggleborder,        {0} },
     { MODKEY,                       'E',       toggleexplorer,      {0} },
-    { MODKEY|MOD_CONTROL,           'L',       writelog,            {0} },
+    // { MODKEY|MOD_CONTROL,           'L',       writelog,            {0} },
     { MODKEY,                       '0',       view,                {.ui = ~0 } },
     { MODKEY|MOD_SHIFT,             '0',       tag,                 {.ui = ~0 } },
     TAGKEYS(                        '1',                            0)
@@ -124,7 +124,7 @@ static Key keys[] = {
     TAGKEYS(                        '7',                            6)
     TAGKEYS(                        '8',                            7)
     TAGKEYS(                        '9',                            8)
-    { MODKEY|MOD_CONTROL,           'Q',       quit,                {0} },
+    // { MODKEY|MOD_CONTROL,           'Q',       quit,                {0} },
 };
 
 
